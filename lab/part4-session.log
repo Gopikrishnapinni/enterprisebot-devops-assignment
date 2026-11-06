@@ -1,0 +1,16 @@
+Part 4 session recording
+========================
+
+This workspace was inspected on 2026-11-06, but Docker, kind, kubectl, Helm,
+and a WSL distribution were unavailable. No cluster commands were run and no
+cluster output is fabricated here.
+
+The chart evidence and fixes are documented in FINDINGS.md. On a provisioned
+Linux machine, start the required real recording with:
+
+  script -q part4-session.log
+  ./scenario.sh reset
+  ./scenario.sh up
+  kubectl -n debug-lab get pods
+  kubectl -n debug-lab describe pods
+  ./scenario.sh verify
